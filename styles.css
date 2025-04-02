@@ -1,4 +1,80 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.navbar-link{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar-link:hover{
+    text-shadow: 2px 2px 5px darkblue;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.hero-image {
+    width: 100%;
+    filter: blur(1.1px);
+}
+
+.hero-wrapper {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-title, .hero-subtitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    font-size: 13vw;
+    white-space: nowrap;
+    font-family: "Meow Script", cursive;
+}
+
+.hero-subtitle {
+    transform: translate(-50%, -67%);
+    font-size: 4vw;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+.hero-button{
+    position: absolute;
+    border: none;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    border-radius: 10px;
+    background: #574ed9;
+    padding: 10px;
+    font-family: "Sour Gummy", sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.hero-button:hover {
+    box-shadow: 2px 2px 5px black;
+    background-color: darkblue;
+}
+
+.aboutme-section {
+    background-color: gray;
 }
