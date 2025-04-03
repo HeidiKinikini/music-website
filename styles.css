@@ -4,6 +4,11 @@ body {
     font-family: "Sour Gummy", sans-serif;
 }
 
+p, h1 {
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -11,10 +16,11 @@ body {
     left: 0;
     right: 0;
     background-color: white;
+    padding: 15px;
 }
 
 .navbar-link{
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -30,37 +36,38 @@ body {
 
 .hero-image {
     width: 100%;
-    filter: blur(1.1px);
+    filter: blur(1.5px);
 }
 
 .hero-wrapper {
     position: relative;
     text-align: center;
     color: white;
+    margin-bottom: -4px;
 }
 
 .hero-title, .hero-subtitle {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -90%);
     font-size: 13vw;
     white-space: nowrap;
     font-family: "Meow Script", cursive;
 }
 
 .hero-subtitle {
-    transform: translate(-50%, -67%);
+    transform: translate(-50%, -20%);
     font-size: 4vw;
     font-family: "Sour Gummy", sans-serif;
 }
 
-.hero-button{
+.hero-button {
     position: absolute;
-    border: none;
-    top: 45%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 200%);
+    transform: translate(-50%, 150%);
+    border: none;
     border-radius: 10px;
     background: #574ed9;
     padding: 10px;
@@ -68,6 +75,7 @@ body {
     color: white;
     cursor: pointer;
     transition: box-shadow 0.2s, background-color 0.2s;
+    font-size: 25px;
 }
 
 .hero-button:hover {
@@ -77,4 +85,5 @@ body {
 
 .aboutme-section {
     background-color: gray;
+    height: 1000px;
 }
