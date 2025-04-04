@@ -83,7 +83,27 @@ p, h1 {
     background-color: darkblue;
 }
 
-.aboutme-section {
-    background-color: gray;
-    height: 1000px;
+.page-break {
+    border: 10px solid lightblue;
+    margin: 0;
+    margin-bottom: 1px;
+}
+
+.about {
+    text-align: center;
+    font-size: 45px;
+    border-bottom: 5px solid black;
+}
+
+.about-me-image{
+    width: 50%;
+}
+
+.info-section {
+    display: flex;
+}
+
+.about-me-text {
+    padding: 10px;
+    font-size: 20px;
 }
