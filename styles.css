@@ -1,7 +1,16 @@
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Sour Gummy", sans-serif;
+}
+img {
+    display: block;      /* Remove inline behavior and gaps below the image */
+    width: 100%;         /* Ensure the image stretches to the full width of the parent */
+    height: auto;        /* Maintain aspect ratio */
+    margin: 0;           /* Remove any margin */
+    padding: 0;  
+            /* Remove any padding */
 }
 
 p, h1 {
@@ -90,25 +99,44 @@ p, h1 {
 }
 
 .about {
+    display: flex;
+    align-items: center;  /* Vertically centers the text */
+    justify-content: center;
     text-align: center;
     font-size: 45px;
+    border-top: 5px solid black;
     border-bottom: 5px solid black;
 }
 
 .about-me-image{
-    width: 50%;
-    height: 100%;
+    width: auto;
+    height: 50vw;
+    
 }
 
 .info-section {
-    display: flex;
-    text-wrap: wrap;
-    height: 400px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+    width: 100%;        /* Parent container takes 80% of the viewport width */
+    height: max-content; /* Fixed height for the parent element */
+    
+}
+.info-section-child {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .about-me-text {
-    padding: 10px;
-    font-size: 15px;
+    
+    max-height: 100%;
+    width: 100%;
+    font-size: 2vw;
+    padding-left: 5px;
+
+    
 }
 
 .footer {
@@ -116,10 +144,14 @@ p, h1 {
  align-items: center;
  justify-content: center;
  padding: 15px;
- border: 5px solid black;
+ border:  5px solid black;
+ 
 }
 
 .social-icons {
     height: 50px;
     margin-left: 50px;
+    width: calc(2vw + 10px);
+    height: auto; 
+    cursor: pointer;
 }
