@@ -1,157 +1,152 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Sour Gummy", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Sour Gummy", sans-serif;
 }
 img {
-    display: block;      /* Remove inline behavior and gaps below the image */
-    width: 100%;         /* Ensure the image stretches to the full width of the parent */
-    height: auto;        /* Maintain aspect ratio */
-    margin: 0;           /* Remove any margin */
-    padding: 0;  
-            /* Remove any padding */
+  display: block; /* Remove inline behavior and gaps below the image */
+  width: 100%; /* Ensure the image stretches to the full width of the parent */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0; /* Remove any margin */
+  padding: 0;
+  /* Remove any padding */
 }
 
-p, h1 {
-    margin: 0;
-    padding: 0;
+p,
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    right: 0;
-    background-color: white;
-    padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 15px;
 }
 
-.navbar-link{
-    font-size: 30px;
-    cursor: pointer;
+.navbar-link {
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.navbar-link:hover{
-    text-shadow: 2px 2px 5px darkblue;
+.navbar-link:hover {
+  text-shadow: 2px 2px 5px darkblue;
 }
 
 .link-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .hero-image {
-    width: 100%;
-    filter: blur(1.5px);
+  width: 100%;
+  filter: blur(1.5px);
 }
 
 .hero-wrapper {
-    position: relative;
-    text-align: center;
-    color: white;
-    margin-bottom: -4px;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: -4px;
 }
 
-.hero-title, .hero-subtitle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -90%);
-    font-size: 13vw;
-    white-space: nowrap;
-    font-family: "Meow Script", cursive;
+.hero-title,
+.hero-subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  font-size: 13vw;
+  white-space: nowrap;
+  font-family: "Meow Script", cursive;
 }
 
 .hero-subtitle {
-    transform: translate(-50%, -20%);
-    font-size: 4vw;
-    font-family: "Sour Gummy", sans-serif;
+  transform: translate(-50%, -20%);
+  font-size: 4vw;
+  font-family: "Sour Gummy", sans-serif;
 }
 
 .hero-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 150%);
-    border: none;
-    border-radius: 10px;
-    background: #574ed9;
-    padding: 10px;
-    font-family: "Sour Gummy", sans-serif;
-    color: white;
-    cursor: pointer;
-    transition: box-shadow 0.2s, background-color 0.2s;
-    font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  border: none;
+  border-radius: 10px;
+  background: #574ed9;
+  padding: 10px;
+  font-family: "Sour Gummy", sans-serif;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background-color 0.2s;
+  font-size: 25px;
 }
 
 .hero-button:hover {
-    box-shadow: 2px 2px 5px black;
-    background-color: darkblue;
+  box-shadow: 2px 2px 5px black;
+  background-color: darkblue;
 }
 
 .page-break {
-    border: 10px solid lightblue;
-    margin: 0;
-    margin-bottom: 1px;
+  border: 10px solid lightblue;
+  margin: 0;
+  margin-bottom: 1px;
 }
 
 .about {
-    display: flex;
-    align-items: center;  /* Vertically centers the text */
-    justify-content: center;
-    text-align: center;
-    font-size: 45px;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+  display: flex;
+  align-items: center; /* Vertically centers the text */
+  justify-content: center;
+  text-align: center;
+  font-size: 45px;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
 }
 
-.about-me-image{
-    width: auto;
-    height: 50vw;
-    
+.about-me-image {
+  width: auto;
+  height: 50vw;
 }
 
 .info-section {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   
-    width: 100%;        /* Parent container takes 80% of the viewport width */
-    height: max-content; /* Fixed height for the parent element */
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%; /* Parent container takes 80% of the viewport width */
+  height: max-content; /* Fixed height for the parent element */
 }
 .info-section-child {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .about-me-text {
-    
-    max-height: 100%;
-    width: 100%;
-    font-size: 2vw;
-    padding-left: 5px;
-
-    
+  max-height: 100%;
+  width: 100%;
+  font-size: 2vw;
+  padding-left: 5px;
 }
 
 .footer {
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 15px;
- border:  5px solid black;
- 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 5px solid black;
 }
 
 .social-icons {
-    height: 50px;
-    margin-left: 50px;
-    width: calc(2vw + 10px);
-    height: auto; 
-    cursor: pointer;
+  height: 50px;
+  margin-left: 50px;
+  width: calc(2vw + 10px);
+  height: auto;
+  cursor: pointer;
 }
