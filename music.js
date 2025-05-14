@@ -6,9 +6,9 @@ if (!code) {
   redirectToAuthCodeFlow(clientId);
 } else {
     const accessToken = await getAccessToken(clientId, code);
-    const profile = await fetchProfile(accessToken);
-    console.log(profile);
-    populateUI(profile);
+    const albums = await fetchProfile(accessToken);
+    console.log(albums);
+    populateUI(albums);
 }
 
 async function redirectToAuthCodeFlow(clientId) {
@@ -68,13 +68,28 @@ async function getAccessToken(clientId, code) {
 }
 
 async function fetchProfile(token) {
-  const result = await fetch("https://api.spotify.com/v1/artists/01RMQtxLlxeZXKceJinOUL", {
+  const result = await fetch("https://api.spotify.com/v1/artists/01RMQtxLlxeZXKceJinOUL/albums", {
     method: "GET", headers: { Authorization: `Bearer ${token}` }
   });
 
   return await result.json();
 }
 
-function populateUI(profile) {
-    // TODO: Update UI with profile data
+function populateUI(albums) {
+    let albumsHTML = ``;
+
+    albums.items.forEach(album => {
+        let currentAlbumHTML = `
+          <div class="card">
+            <p class="card-title">${album.name}</p>
+            <img src="${album.images[0].url}" class="card-image">
+            <button class="card-button">Explore Song</button>
+          </div>
+        `;
+
+        albumsHTML += currentAlbumHTML;
+    });
+
+    let cardContainer = document.getElementById("card-container");
+    cardContainer.innerHTML = albumsHTML;
 }
