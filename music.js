@@ -1,13 +1,22 @@
 const clientId = "50fb808e20fd469886ed90829cb89fdd";
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
+const cards = [];
+let currentCard = 0;
+
+document.getElementById("swipe-right-button").addEventListener("click", () => {
+  swipeRight();
+});
+
+document.getElementById("swipe-left-button").addEventListener("click", () => {
+  swipeLeft();
+});
 
 if (!code) {
   redirectToAuthCodeFlow(clientId);
 } else {
     const accessToken = await getAccessToken(clientId, code);
     const albums = await fetchProfile(accessToken);
-    console.log(albums);
     populateUI(albums);
 }
 
@@ -76,8 +85,6 @@ async function fetchProfile(token) {
 }
 
 function populateUI(albums) {
-    let albumsHTML = ``;
-
     albums.items.forEach(album => {
         let currentAlbumHTML = `
           <div class="card">
@@ -87,9 +94,64 @@ function populateUI(albums) {
           </div>
         `;
 
-        albumsHTML += currentAlbumHTML;
+        cards.push(currentAlbumHTML);
     });
 
+    let currentAlbumsHTML = cards[cards.length - 1];
+
+    for (let i = 0; i < 2; i++)
+    {
+      currentAlbumsHTML += cards[i];
+    }
+
     let cardContainer = document.getElementById("card-container");
-    cardContainer.innerHTML = albumsHTML;
+    cardContainer.innerHTML = currentAlbumsHTML;
+}
+
+function swipeRight() {
+  if (currentCard === (cards.length - 1)) {
+    currentCard = 0;
+  } else {
+    currentCard++;
+  }
+
+    updateCurrentAlbums();
+}
+
+function swipeLeft() {
+  if (currentCard === 0) {
+    currentCard = cards.length - 1;
+  } else {
+    currentCard--;
+  }
+
+    updateCurrentAlbums();
+}
+
+function updateCurrentAlbums() {
+    let previousCard;
+
+    if (currentCard === 0) {
+      previousCard = cards[cards.length - 1];
+    } else {
+      previousCard = cards[currentCard - 1];
+    }
+
+    let nextCard;
+
+    if (currentCard === cards.length - 1) {
+      nextCard = cards[0];
+    } else {
+      nextCard = cards[currentCard + 1];
+    }
+
+    let currentAlbumsHTML = previousCard + cards[currentCard] + nextCard;
+
+    let cardContainer = document.getElementById("card-container");
+    cardContainer.innerHTML = currentAlbumsHTML;
+
+    const cardElements = document.getElementsByClassName("card");
+
+    cardElements[0].className = "card-background";
+    cardElements[1].className = "card-background";
 }

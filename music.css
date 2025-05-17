@@ -19,6 +19,12 @@ body {
   width: 500px;
 }
 
+.card-background {
+  margin-right: 45px;
+  position: relative;
+  width: 500px;
+}
+
 .card-image {
   border: 7px solid rgb(255, 255, 255);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 50%);
