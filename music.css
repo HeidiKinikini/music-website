@@ -1,11 +1,12 @@
 body {
   font-family: "Sour Gummy", sans-serif;
   background-color: rgb(219, 219, 219);
+  margin: 0;
 }
 
 .card-container {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -75,4 +76,58 @@ body {
   width: 170px;
   font-size: 19px;
   background-color: rgb(125, 164, 179);
+}
+
+#button-container {
+  width: 97%;
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  transform: translate(-50%);
+  display:flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#swipe-left-button{
+  transform: rotate(180deg);
+}
+
+.music-page-title{
+  display: flex;
+  justify-content: center;
+  margin: 4;
+  padding: 0;
+  font-size: 50px;
+}
+
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 15px;
+}
+
+.navbar-link {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar-link:hover {
+  text-shadow: 2px 2px 5px darkblue;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }

@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heidi Duckwitz Music</title>
     <link rel="stylesheet" href="music.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward">
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="music.js" type="module" defer></script>
 </head>
 <body>
+    <navbar class="navbar">
+        <div class="link-container">
+            <p class="navbar-link">Photo Gallery</p> 
+            <p class="navbar-link">Music</p>
+            <p class="navbar-link">Contact Me</p>
+        </div>
+    </navbar>
+
+    <h1 class="music-page-title">My Music</h1>
+
     <div id="card-container" class="card-container"></div>
-    <button id="swipe-left-button">Swipe Left</button>
-    <button id="swipe-right-button">Swipe Right</button>
+    <div id="button-container">
+        <img src="/pictures/icons8-arrow-48.png" id="swipe-left-button"></img>
+        <img src="/pictures/icons8-arrow-48.png" id="swipe-right-button"></img>
+    </div>
 </body>
 </html>
